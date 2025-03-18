@@ -5,6 +5,6 @@
     maintainers: [
         "@KamilKleina"
     ],
-    type: utilities,
+    type: script,
     license: "MIT"
 }

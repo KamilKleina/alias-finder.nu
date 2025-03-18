@@ -1,11 +1,14 @@
 # Table of Contents
 
 - [Description](#description)
+- [Customization](#customization)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
 - [License](#license)
+- [Inspiration](#inspiration)
+- [TODO](#todo)
 
 ## Description
 
@@ -27,6 +30,13 @@ up the command in `aliases`)
 │ 3 │ alias-finder │  
 │ 4 │ nupm.nuon    │  
 ```
+
+## Customization
+
+| Variable                | Description | Default             |
+|----------------------------------|-----------------------------------------------------------------|---------------------|
+| `NU_ALIAS_FINDER_PREFIX`| Prefix used for aliased command display. | ` Alias Tip:`|
+| `NU_ALIAS_FINDER_IGNORED`  | Comma delimited string of ignored aliases.| `''`|
 
 ## Installation
 
@@ -63,5 +73,6 @@ This plugin is based on
 
 ## TODO
 
-- [ ] Add option to ignore certain commands
-- [ ] Add option to show the tip in different format
+- [x] Add option to ignore certain commands
+- [x] Add option to show the tip in different format
+- [ ] Add option customize color of the tip
