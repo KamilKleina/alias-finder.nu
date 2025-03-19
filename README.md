@@ -75,4 +75,4 @@ This plugin is based on
 
 - [x] Add option to ignore certain commands
 - [x] Add option to show the tip in different format
-- [] Add option customize color of the tip
+- [ ] Add option customize color of the tip
