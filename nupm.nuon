@@ -1,10 +1,10 @@
 {
-    name: alias-finder,
-    description: "A package that provides a tip in Nushell, suggesting the use of an alias for commands that haven't been used with it.",
-    version: "0.1.0",
+    name: alias-finder
+    description: "A package that provides a tip in Nushell, suggesting the use of an alias for commands that haven't been used with it."
+    version: "0.1.0"
     maintainers: [
         "@KamilKleina"
-    ],
-    type: script,
+    ]
+    type: script
     license: "MIT"
 }
