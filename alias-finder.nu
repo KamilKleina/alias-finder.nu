@@ -28,16 +28,16 @@ export-env {
             print $"(ansi blue_bold)(get_prefix)(ansi reset) (help aliases | where expansion == ($cmd) | get 0 | get name)"
             return
         }
-        if (help aliases | where {|it| $it.expansion | str contains '($cmd)'} | length ) > 0 {
-            print $"(ansi blue_bold)(get_prefix)(ansi reset) (help aliases | where {|it| $it.expansion | str contains '($cmd)'} | get 0 | get name)"
+        if (help aliases | where {|it| $cmd | str contains $it.expansion} | length ) > 0 {
+            print $"(ansi blue_bold)(get_prefix)(ansi reset) (help aliases | where {|it| $cmd | str contains $it.expansion} | get 0 | get name)"
             return
         }
     }
     # hook
     $env.config = (
         $env.config
-        | upsert hooks.pre_execution [ {|| 
-            $env.repl_commandline = (commandline) 
+        | upsert hooks.pre_execution [ {||
+            $env.repl_commandline = (commandline)
             check_if_aliased $env.repl_commandline
         } ]
     )
